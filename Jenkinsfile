@@ -16,7 +16,7 @@ pipeline {
 		
         stage ("Clone Repository") {
                 steps {
-                   git branch: 'master', url: 'https://github.com/RamanaKondaveeti/CalculatorAndroidGradle.git'
+                   git branch: 'main', url: 'https://github.com/RamanaKondaveeti/Calculator.git'
                 }
             }  
 
@@ -47,7 +47,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh "chmod +x gradlew"
-                sh './gradlew clean package'
+                sh './gradlew clean build'
             }
          }
 
